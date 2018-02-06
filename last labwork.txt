@@ -348,6 +348,67 @@ Untracked files:
 ->mca@mca-HP-280-G2-MT:~/sruthi$ git checkout node1// to checkout from branch
 Switched to branch 'node1'
 
+->mca@mca-HP-280-G2-MT:~/sruthi$ git checkout master // checkout from master
+A	disp.sh
+A	disp1.sh
+D	example1
+M	example1.sh
+D	example2
+A	example3.h
+A	last labwork.txt
+A	last labwork.txt~
+A	varsha/lab.sh
+Switched to branch 'master'
+
+->mca@mca-HP-280-G2-MT:~/sruthi$ nano disp1.sh // modify a file
+->mca@mca-HP-280-G2-MT:~/sruthi$ git status // show the sttus
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   disp.sh
+	new file:   disp1.sh
+	modified:   example1.sh
+	deleted:    example2
+	renamed:    example1 -> example3.h
+	new file:   last labwork.txt
+	new file:   last labwork.txt~
+	new file:   varsha/lab.sh
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   disp1.sh
+
+->mca@mca-HP-280-G2-MT:~/sruthi$ git add disp1.sh// add the modified file
+mca@mca-HP-280-G2-MT:~/sruthi$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   disp.sh
+	new file:   disp1.sh
+	modified:   example1.sh
+	deleted:    example2
+	renamed:    example1 -> example3.h
+	new file:   last labwork.txt
+	new file:   last labwork.txt~
+	new file:   varsha/lab.sh
+->mca@mca-HP-280-G2-MT:~/sruthi$ git commit -m "committed all"//comittied all works after creating branches
+[node2 86c4b8b] committed all
+ 8 files changed, 726 insertions(+), 1 deletion(-)
+ create mode 100644 disp.sh
+ create mode 100644 disp1.sh
+ delete mode 100644 example2
+ rename example1 => example3.h (100%)
+ create mode 100644 last labwork.txt
+ create mode 100644 last labwork.txt~
+ create mode 100644 varsha/lab.sh
+
+->mca@mca-HP-280-G2-MT:~/sruthi$ git branch --contains 86c4b8b// to find branches with a commit id
+* node2
+
 
 
 
