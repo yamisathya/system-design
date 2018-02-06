@@ -1,0 +1,362 @@
+
+*mca@mca-HP-280-G2-MT:~$ mkdir sruthi
+mca@mca-HP-280-G2-MT:~$ cd sruthi
+mca@mca-HP-280-G2-MT:~/sruthi$ git init
+
+Initialized empty Git repository in /home/mca/sruthi/.git/
+
+mca@mca-HP-280-G2-MT:~/sruthi$ git config user.name "sruthi"
+mca@mca-HP-280-G2-MT:~/sruthi$ git config user.email "sruthisathyan001@gmail.com"
+mca@mca-HP-280-G2-MT:~/sruthi$ git add .
+mca@mca-HP-280-G2-MT:~/sruthi$ git commit -m "user configure"
+On branch master
+
+Initial commit
+nothing to commit
+
+mca@mca-HP-280-G2-MT:~/sruthi$ nano example1
+mca@mca-HP-280-G2-MT:~/sruthi$ bash example1
+what's going on?
+lab work
+lab work
+
+mca@mca-HP-280-G2-MT:~/sruthi$ git status
+On branch master
+Initial commit
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	example1
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+mca@mca-HP-280-G2-MT:~/sruthi$ git add example1
+mca@mca-HP-280-G2-MT:~/sruthi$ git status
+On branch master
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   example1
+
+mca@mca-HP-280-G2-MT:~/sruthi$ git config --global color.ui auto
+
+
+mca@mca-HP-280-G2-MT:~/sruthi$ nano example1.sh
+mca@mca-HP-280-G2-MT:~/sruthi$ bash example1.sh
+what' going on?
+lab work                                                            
+lab work
+mca@mca-HP-280-G2-MT:~/sruthi$ git add example1.sh
+mca@mca-HP-280-G2-MT:~/sruthi$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   example1
+	new file:   example1.sh
+
+mca@mca-HP-280-G2-MT:~/sruthi$ nano example1.sh
+mca@mca-HP-280-G2-MT:~/sruthi$ bash example1.sh
+what's going there?
+dont know
+dont know
+mca@mca-HP-280-G2-MT:~/sruthi$ git add example1.sh
+mca@mca-HP-280-G2-MT:~/sruthi$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   example1
+	new file:   example1.sh
+
+mca@mca-HP-280-G2-MT:~/sruthi$ git commit -m "two files add"
+[master (root-commit) 93c55e1] two files add
+ 2 files changed, 7 insertions(+)
+ create mode 100644 example1
+ create mode 100644 example1.sh
+
+mca@mca-HP-280-G2-MT:~/sruthi$ git clone git://github.com/tswicegood/bobby-tables.git
+Cloning into 'bobby-tables'...
+remote: Counting objects: 39, done.
+remote: Total 39 (delta 0), reused 0 (delta 0), pack-reused 39
+Receiving objects: 100% (39/39), 43.03 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (10/10), done.
+Checking connectivity... done.
+
+mca@mca-HP-280-G2-MT:~/sruthi$ git clone --depth 10 git://github.com/tswicegood/bobby-tables.git
+fatal: destination path 'bobby-tables' already exists and is not an empty directory.
+mca@mca-HP-280-G2-MT:~/sruthi$ git clone --depth 5 git://github.com/collections/devops-tools
+Cloning into 'devops-tools'...
+fatal: remote error: 
+  Repository not found.
+mca@mca-HP-280-G2-MT:~/sruthi$ git clone --depth 5 git://github.com/openstack/openstack
+Cloning into 'openstack'...
+remote: Counting objects: 14, done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 14 (delta 4), reused 7 (delta 0), pack-reused 0
+Receiving objects: 100% (14/14), 13.29 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (4/4), done.
+Checking connectivity... done.
+
+mca@mca-HP-280-G2-MT:~/sruthi$ git add bobby-tables
+mca@mca-HP-280-G2-MT:~/sruthi$  git add openstack
+mca@mca-HP-280-G2-MT:~/sruthi$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   bobby-tables
+	new file:   openstack
+
+mca@mca-HP-280-G2-MT:~/sruthi$ git clone --depth 1 git://github.com/standard/standard
+Cloning into 'standard'...
+remote: Counting objects: 78, done.
+remote: Compressing objects: 100% (74/74), done.
+remote: Total 78 (delta 5), reused 51 (delta 0), pack-reused 0
+Receiving objects: 100% (78/78), 483.57 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (5/5), done.
+Checking connectivity... done.
+mca@mca-HP-280-G2-MT:~/sruthi$ nano example2
+mca@mca-HP-280-G2-MT:~/sruthi$ nano example2.sh
+mca@mca-HP-280-G2-MT:~/sruthi$ bash example2.sh
+did you complete all?
+yes upto shallow clonning
+yes upto shallow clonning
+mca@mca-HP-280-G2-MT:~/sruthi$ git add - A
+fatal: pathspec '-' did not match any files
+mca@mca-HP-280-G2-MT:~/sruthi$ git add -A
+mca@mca-HP-280-G2-MT:~/sruthi$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   bobby-tables
+	new file:   example2
+	new file:   example2.sh
+	new file:   openstack
+	new file:   standard
+
+mca@mca-HP-280-G2-MT:~/sruthi$ nano example2.sh
+mca@mca-HP-280-G2-MT:~/sruthi$ git add --update
+mca@mca-HP-280-G2-MT:~/sruthi$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   bobby-tables
+	new file:   example2
+	new file:   example2.sh
+	new file:   openstack
+	new file:   standard
+
+mca@mca-HP-280-G2-MT:~/sruthi$ git commit -m "example2 update" -a
+[master d7b8da7] example2 update
+ 5 files changed, 12 insertions(+)
+ create mode 160000 bobby-tables
+ create mode 100644 example2
+ create mode 100644 example2.sh
+ create mode 160000 openstack
+ create mode 160000 standard
+mca@mca-HP-280-G2-MT:~/sruthi$ nano example1.sh
+mca@mca-HP-280-G2-MT:~/sruthi$ 
+mca@mca-HP-280-G2-MT:~/sruthi$ git add -p example1
+No changes.
+mca@mca-HP-280-G2-MT:~/sruthi$ git add -p example1.sh
+diff --git a/example1.sh b/example1.sh
+index bd8bd80..7c2fec1 100644
+--- a/example1.sh
++++ b/example1.sh
+@@ -1,4 +1,6 @@
+ echo "what's going there?";
+ read event;
+ echo $event;
++echo "have a nice day";
++
+ 
+Stage this hunk [y,n,q,a,d,/,e,?]? y
+<stdin>:10: new blank line at EOF.
++
+warning: 1 line adds whitespace errors.
+
+mca@mca-HP-280-G2-MT:~/sruthi$ nano example1.sh
+mca@mca-HP-280-G2-MT:~/sruthi$ git add -p example1.sh
+diff --git a/example1.sh b/example1.sh
+index 7c2fec1..ca7c6f7 100644
+--- a/example1.sh
++++ b/example1.sh
+@@ -2,5 +2,5 @@ echo "what's going there?";
+ read event;
+ echo $event;
+ echo "have a nice day";
+-
++echo "example1 is over";
+ 
+Stage this hunk [y,n,q,a,d,/,e,?]? y
+
+mca@mca-HP-280-G2-MT:~/sruthi$ git add -e
+fatal: unrecognized input
+fatal: Could not apply '.git/ADD_EDIT.patch'
+mca@mca-HP-280-G2-MT:~/sruthi$ git reset HEAD --example1.sh
+error: unknown option `example1.sh'
+usage: git reset [--mixed | --soft | --hard | --merge | --keep] [-q] [<commit>]
+   or: git reset [-q] <tree-ish> [--] <paths>...
+   or: git reset --patch [<tree-ish>] [--] [<paths>...]
+
+    -q, --quiet           be quiet, only report errors
+    --mixed               reset HEAD and index
+    --soft                reset only HEAD
+    --hard                reset HEAD, index and working tree
+    --merge               reset HEAD, index and working tree
+    --keep                reset HEAD but keep local changes
+    -p, --patch           select hunks interactively
+
+mca@mca-HP-280-G2-MT:~/sruthi$ git reset HEAD --hard example1.sh
+fatal: Cannot do hard reset with paths.
+mca@mca-HP-280-G2-MT:~/sruthi$ git commit
+Aborting commit due to empty commit message.
+mca@mca-HP-280-G2-MT:~/sruthi$ git commit -m "commited all"
+[master 945ea58] commited all
+ 1 file changed, 2 insertions(+)
+mca@mca-HP-280-G2-MT:~/sruthi$ git reset --hard <example1.sh>
+bash: syntax error near unexpected token `newline'
+mca@mca-HP-280-G2-MT:~/sruthi$ git reset --hard example1.sh
+fatal: Cannot do hard reset with paths.
+mca@mca-HP-280-G2-MT:~/sruthi$ git reset --soft example1.sh
+fatal: Cannot do soft reset with paths.
+mca@mca-HP-280-G2-MT:~/sruthi$ git reset -q example1.sh
+mca@mca-HP-280-G2-MT:~/sruthi$ bash example1.sh
+what's going there?
+nothing
+nothing
+have a nice day
+example1 is over
+mca@mca-HP-280-G2-MT:~/sruthi$ git reset -q example1.sh
+mca@mca-HP-280-G2-MT:~/sruthi$ bash example1.sh
+what's going there?
+something
+something
+have a nice day
+example1 is over
+mca@mca-HP-280-G2-MT:~/sruthi$ nano example1.sh
+mca@mca-HP-280-G2-MT:~/sruthi$ git commit -m "lst updt"
+On branch master
+Changes not staged for commit:
+	modified:   example1.sh
+
+no changes added to commit
+mca@mca-HP-280-G2-MT:~/sruthi$ git add -u
+mca@mca-HP-280-G2-MT:~/sruthi$ get status
+No command 'get' found, but there are 19 similar ones
+get: command not found
+mca@mca-HP-280-G2-MT:~/sruthi$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   example1.sh
+
+mca@mca-HP-280-G2-MT:~/sruthi$ git reset -p example1.sh
+diff --git a/example1.sh b/example1.sh
+index ca7c6f7..1c00b22 100644
+--- a/example1.sh
++++ b/example1.sh
+@@ -3,4 +3,6 @@ read event;
+ echo $event;
+ echo "have a nice day";
+ echo "example1 is over";
++echo "bye";
++
+ 
+Unstage this hunk [y,n,q,a,d,/,e,?]? n
+
+mca@mca-HP-280-G2-MT:~/sruthi$ git reset -p example1.sh
+diff --git a/example1.sh b/example1.sh
+index ca7c6f7..1c00b22 100644
+--- a/example1.sh
++++ b/example1.sh
+@@ -3,4 +3,6 @@ read event;
+ echo $event;
+ echo "have a nice day";
+ echo "example1 is over";
++echo "bye";
++
+ 
+Unstage this hunk [y,n,q,a,d,/,e,?]? q
+
+
+mca@mca-HP-280-G2-MT:~/sruthi$ git rm -n -- example2
+rm 'example2'
+mca@mca-HP-280-G2-MT:~/sruthi$ git rm -r -- example2
+rm 'example2'
+
+mca@mca-HP-280-G2-MT:~/sruthi$ git rm -f -- sec.sh
+rm 'sec.sh'
+
+
+mca@mca-HP-280-G2-MT:~/sruthi$ mkdir varsha
+mca@mca-HP-280-G2-MT:~/sruthi$ git mv lab.sh /home/mca/sruthi/varsha 
+
+ undo
+mca@mca-HP-280-G2-MT:~/sruthi$ nano disp.sh
+mca@mca-HP-280-G2-MT:~/sruthi$ git add -A
+mca@mca-HP-280-G2-MT:~/sruthi$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   disp.sh
+	modified:   example1.sh
+	deleted:    example2
+	renamed:    example1 -> example3.h
+	new file:   last labwork.txt
+	new file:   last labwork.txt~
+	new file:   varsha/lab.sh
+
+mca@mca-HP-280-G2-MT:~/sruthi$ git reset HEAD disp.sh
+mca@mca-HP-280-G2-MT:~/sruthi$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   example1.sh
+	deleted:    example2
+	renamed:    example1 -> example3.h
+	new file:   last labwork.txt
+	new file:   last labwork.txt~
+	new file:   varsha/lab.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	disp.sh
+
+6/2/18
+->mca@mca-HP-280-G2-MT:~/sruthi$ git branch -a // to view all branches
+* master
+->mca@mca-HP-280-G2-MT:~/sruthi$ git branch node1 // to crete a new branch
+->mca@mca-HP-280-G2-MT:~/sruthi/bobby-tables$ git branch -r // to view remote branch
+  origin/HEAD -> origin/master
+  origin/master
+->mca@mca-HP-280-G2-MT:~/sruthi$ git checkout node1// to checkout from branch
+Switched to branch 'node1'
+
+
+
+
+
+
+
+
+
+
+
+
+
