@@ -361,7 +361,7 @@ A	varsha/lab.sh
 Switched to branch 'master'
 
 ->mca@mca-HP-280-G2-MT:~/sruthi$ nano disp1.sh // modify a file
-->mca@mca-HP-280-G2-MT:~/sruthi$ git status // show the sttus
+->mca@mca-HP-280-G2-MT:~/sruthi$ git status // show the status
 On branch master
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
@@ -406,8 +406,75 @@ Changes to be committed:
  create mode 100644 last labwork.txt~
  create mode 100644 varsha/lab.sh
 
-->mca@mca-HP-280-G2-MT:~/sruthi$ git branch --contains 86c4b8b// to find branches with a commit id
+->mca@mca-HP-280-G2-MT:~/sruthi$ git branch --contains 86c4b8b// to find branches with a commit id 
 * node2
+
+->mca@mca-HP-280-G2-MT:~/sruthi$ git checkout -b node3 //create a new node 3 and modified example1.sh and merge 
+M	last labwork.txt
+M	last labwork.txt~
+Switched to a new branch 'node3'
+mca@mca-HP-280-G2-MT:~/sruthi$ nano example1.sh
+mca@mca-HP-280-G2-MT:~/sruthi$ 
+mca@mca-HP-280-G2-MT:~/sruthi$ git add .
+mca@mca-HP-280-G2-MT:~/sruthi$ git commit -m "example1 modified commited"[node3 0a13903] example1 modified commited
+ 3 files changed, 138 insertions(+), 1 deletion(-)
+mca@mca-HP-280-G2-MT:~/sruthi$ 
+
+
+->mca@mca-HP-280-G2-MT:~/sruthi$ git checkout master // merge
+Switched to branch 'master'
+mca@mca-HP-280-G2-MT:~/sruthi$ git merge node3
+Updating 945ea58..0a13903
+Fast-forward
+ disp.sh                |   6 +
+ disp1.sh               |   6 +
+ example1.sh            |   1 +
+ example2               |   1 -
+ example1 => example3.h |   0
+ last labwork.txt       | 423 +++++++++++++++++++++++++++++++++++++++++++++++++
+ last labwork.txt~      | 423 +++++++++++++++++++++++++++++++++++++++++++++++++
+ varsha/lab.sh          |   4 +
+ 8 files changed, 863 insertions(+), 1 deletion(-)
+ create mode 100644 disp.sh
+ create mode 100644 disp1.sh
+ delete mode 100644 example2
+ rename example1 => example3.h (100%)
+ create mode 100644 last labwork.txt
+ create mode 100644 last labwork.txt~
+ create mode 100644 varsha/lab.sh
+
+->mca@mca-HP-280-G2-MT:~/sruthi$ git checkout node1 // to view the change maded in node effect in master
+Switched to branch 'node1'
+mca@mca-HP-280-G2-MT:~/sruthi$ nano example1.sh
+mca@mca-HP-280-G2-MT:~/sruthi$ git add .
+mca@mca-HP-280-G2-MT:~/sruthi$ git commit -m "chnged"
+[node1 6f78624] chnged
+ 1 file changed, 1 deletion(-)
+mca@mca-HP-280-G2-MT:~/sruthi$ git checkout master
+Switched to branch 'master'
+mca@mca-HP-280-G2-MT:~/sruthi$ git merge node1
+Auto-merging example1.sh
+
+mca@mca-HP-280-G2-MT:~/sruthi$ nano example1.sh
+
+o/p
+------
+
+echo "what's going there?";
+read event;
+echo $event;
+echo "have a nice day";
+<<<<<<< HEAD
+
+
+=======
+echo "no change"
+>>>>>>> node1
+
+
+
+
+
 
 
 

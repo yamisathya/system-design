@@ -406,7 +406,7 @@ Changes to be committed:
  create mode 100644 last labwork.txt~
  create mode 100644 varsha/lab.sh
 
-->mca@mca-HP-280-G2-MT:~/sruthi$ git branch --contains 86c4b8b// tp find branches with a commit id
+->mca@mca-HP-280-G2-MT:~/sruthi$ git branch --contains 86c4b8b// to find branches with a commit id
 * node2
 
 
